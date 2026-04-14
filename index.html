@@ -322,6 +322,26 @@
     .about-inner { grid-template-columns:1fr; gap:40px; }
     .about-img-wrap { max-width:280px; }
   }
+
+  /* ══ SCROLL ARROW ══ */
+  .scroll-arrow {
+    position:absolute; bottom:32px; left:50%; transform:translateX(-50%);
+    color:var(--orange); opacity:.7;
+    display:flex; flex-direction:column; align-items:center; gap:6px;
+    text-decoration:none;
+    animation:arrowBounce 2s ease-in-out infinite;
+    transition:opacity .2s;
+  }
+  .scroll-arrow:hover { opacity:1; }
+  .scroll-arrow::before {
+    content:'role para baixo';
+    font-size:9px; letter-spacing:2.5px; text-transform:uppercase;
+    color:var(--text-muted);
+  }
+  @keyframes arrowBounce {
+    0%,100%{ transform:translateX(-50%) translateY(0); }
+    50%    { transform:translateX(-50%) translateY(8px); }
+  }
 </style>
 </head>
 <body>
@@ -343,12 +363,18 @@
     <a href="#preco" class="btn">Quero o Efeito Midas</a>
     <p class="price-hint"><s>R$247</s> &nbsp;→&nbsp; <strong>R$97 no lançamento</strong></p>
   </div>
+
+  <a href="#problema" class="scroll-arrow" aria-label="Rolar para baixo">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+      <path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </a>
 </section>
 
 <div class="divider"></div>
 
 <!-- PROBLEMA -->
-<section class="section">
+<section class="section" id="problema">
   <p class="label reveal">O problema</p>
   <h2 class="big-title reveal d1">Você cria.<br>Você posta.<br><em>Ninguém vê.</em></h2>
   <p class="reveal d2" style="font-size:15px;color:var(--text-muted);max-width:560px;line-height:1.7">
