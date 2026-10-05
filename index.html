@@ -758,6 +758,18 @@
   .foot-wa { display:inline-flex; align-items:center; gap:10px; padding:11px 20px; border-radius:999px; border:1.5px solid #25D366; color:#fff; text-decoration:none; font-weight:500; font-size:15px; }
   .foot-wa svg { color:#25D366; }
   .foot-wa:hover { background:rgba(37,211,102,.12); }
+  /* perguntas frequentes */
+  .faq { padding:72px 24px; }
+  .faq-inner { max-width:760px; margin:0 auto; }
+  .faq-list { margin-top:32px; display:grid; gap:2px; }
+  .faq-list details { background:var(--dark2); border-left:3px solid transparent; transition:background .3s, border-color .3s; }
+  .faq-list details[open], .faq-list details:hover { background:var(--dark3); border-left-color:var(--orange); }
+  .faq-list summary { list-style:none; cursor:pointer; padding:20px 28px; padding-right:56px; position:relative; font-family:'Barlow Condensed',sans-serif; font-size:19px; font-weight:700; text-transform:uppercase; letter-spacing:.5px; color:#fff; }
+  .faq-list summary::-webkit-details-marker { display:none; }
+  .faq-list summary::after { content:'+'; position:absolute; right:28px; top:50%; transform:translateY(-50%); font-size:24px; color:var(--orange); transition:transform .3s; }
+  .faq-list details[open] summary::after { transform:translateY(-50%) rotate(45deg); }
+  .faq-list details p { padding:0 28px 22px; font-size:15px; line-height:1.7; color:var(--text); max-width:620px; }
+  .faq-list summary:focus-visible { outline:2px solid var(--orange); outline-offset:3px; }
 </style>
 <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 
@@ -994,6 +1006,20 @@
         <p class="gsub">Seu risco é zero.</p>
         <p class="gdesc">Entre, assista às aulas, faça as primeiras tarefas. Se chegar à conclusão de que o Efeito Midas não é pra você, é só pedir o reembolso em até 7 dias. Devolvemos tudo que você pagou, sem burocracia e sem pergunta.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="duvidas">
+  <div class="faq-inner">
+    <p class="label reveal">Perguntas frequentes</p>
+    <h2 class="big-title reveal d1" style="font-size:clamp(30px,5vw,52px)">Ainda com <em>dúvida?</em></h2>
+    <div class="faq-list reveal d2">
+      <details><summary>Preciso de câmera ou equipamento caro?</summary><p>Não. Tudo funciona com celular, e você aprende a gravar com o que já tem.</p></details>
+      <details><summary>Nunca criei conteúdo. Serve pra mim?</summary><p>Serve. O curso começa do zero, antes de qualquer técnica.</p></details>
+      <details><summary>Já posto, mas ninguém vê. Vai me ajudar?</summary><p>Vai. Você entende o que está travando seus vídeos e ganha um jeito simples de escolher o que postar e como falar.</p></details>
+      <details><summary>Posso parcelar?</summary><p>Sim, em até 12x no cartão.</p></details>
+      <details><summary>E se eu não gostar?</summary><p>Você tem 7 dias de garantia. Se não fizer sentido pra você, devolvemos 100% do valor.</p></details>
     </div>
   </div>
 </section>
