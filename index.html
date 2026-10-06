@@ -788,7 +788,7 @@
   fbq('track', 'PageView');
   document.addEventListener('click', function(ev){
     var a = ev.target.closest && ev.target.closest('a[href*="pay.kiwify.com.br"]');
-    if (a) fbq('track', 'InitiateCheckout');
+    if (a) fbq('trackCustom', 'CliqueComprar');
   });
 })();
 </script>
